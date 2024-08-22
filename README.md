@@ -53,5 +53,27 @@ A function is defined to preprocess the input image, make predictions using the 
 #### 2. Creating the Gradio Interface
 The interface is built using Gradio, allowing users to interact with the model. Different themes are provided for customization.
 
+### Part 2: Deployment Using Microsoft Custom Vision
+
+After building the model using CNN, I further trained the same set of images in Microsoft Custom Vision. This platform provides an easy way to build, train, and deploy machine learning models for image classification tasks.
+
+#### Steps Followed
+
+1. **Image Upload and Training:**
+   - The same set of MRI images, labeled as 'Tumor' and 'No Tumor,' was uploaded to Microsoft Custom Vision.
+   - The platform's interface was used to train the model, leveraging Microsoft's cloud infrastructure to optimize the model for accuracy and performance.
+
+2. **Model Deployment:**
+   - Once the model was trained, it was deployed as a web service, generating an endpoint that can be accessed via HTTP requests. This allows the model to be integrated into various applications.
+
+3. **Integration with Streamlit:**
+   - Using a Streamlit app, I connected the Custom Vision model's endpoint with the Streamlit interface, enabling users to interact with the model directly through a web browser.
+   - The Streamlit app allows users to upload MRI images, which are then sent to the Custom Vision endpoint for classification. The results (either 'Tumor' or 'No Tumor') are displayed in real-time.
+
+#### Accessing the Deployed Model
+You can access the deployed model and test it yourself through the following link: [Brain Tumor Classifier on Streamlit](https://brain-tumor-classifier-mcv.streamlit.app/).
+
+This deployment demonstrates how Microsoft Custom Vision and Streamlit can be combined to create a user-friendly and accessible AI application.
+
 
 
